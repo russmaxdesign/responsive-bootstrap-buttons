@@ -1,0 +1,50 @@
+/* basic styles */
+
+body { padding: 20px; }
+.container-fluid { max-width: 1000px; }
+
+
+/* media-query flags */
+
+body:before
+{
+	position: fixed;
+	z-index: 3000;
+	top: 0;
+	right: 0;
+	padding: 5px;
+	color: #fff;
+	font-weight: bold;
+	font-size: 50px;
+	content: "XS";
+	background: red;
+}
+
+@media (min-width: 768px) { body:before { content: "SM"; background: purple; } }
+@media (min-width: 992px) { body:before { content: "MD"; background: green; } }
+@media (min-width: 1200px) { body:before { content: "LG"; background: blue; } }
+
+/* background-color classes */
+
+.red { background: rgba(255,0,0,.2); }
+.green { background: rgba(0,255,0,.2); }
+
+
+/* text-break */
+
+.text-break { white-space: normal; }
+
+@media (max-width: 479px)
+{
+	.text-break-xs { white-space: normal; }
+}
+
+@media (min-width: 480px) and (max-width: 767px)
+{
+	.text-break-sm { white-space: normal; }
+}
+
+@media (min-width: 768px) and (max-width: 991px)
+{
+	.text-break-md { white-space: normal; }
+}
